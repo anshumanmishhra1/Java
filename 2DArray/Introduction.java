@@ -249,3 +249,70 @@ public static void main(String[] args) {
 }
 }
 */
+
+/*📌Spiral Matrix :  
+ 
+
+
+
+public class Introduction {
+
+static void spiralMatrix(int arr[][], int r , int c){
+        int topRow = 0;
+        int bottomRow = r-1;
+        int rightCol = c-1;
+        int leftCol = 0;
+        
+        int totalElement = 0;
+        while (totalElement < r * c) { // Corrected condition
+        // topRow -> from leftCol to rightCol
+        for (int j = leftCol; j <= rightCol && totalElement < r * c; j++) {
+            System.out.print(arr[topRow][j] + " ");
+            totalElement++;
+        }
+        topRow++;
+        
+        // rightCol -> from topRow to bottomRow
+        for (int i = topRow; i <= bottomRow && totalElement < r * c; i++) {
+            System.out.print(arr[i][rightCol] + " ");
+            totalElement++;
+        }
+        rightCol--;
+        
+        // bottomRow -> from rightCol to leftCol
+        for (int j = rightCol; j >= leftCol && totalElement < r * c; j--) {
+            System.out.print(arr[bottomRow][j] + " ");
+            totalElement++;
+        }
+        bottomRow--;
+        
+        // leftCol -> from bottomRow to topRow
+        for (int i = bottomRow; i >= topRow && totalElement < r * c; i--) {
+            System.out.print(arr[i][leftCol] + " "); // Added missing space
+            totalElement++;
+        }
+        leftCol++;
+    }
+}
+
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int m,n;
+    System.out.println("Enter the row and column of first Array : ");
+    m = sc.nextInt();
+    n = sc.nextInt();
+    
+    int arr1[][] = new int[m][n];
+    
+    System.out.println("Enter the elements of ther Array-1 ");
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            arr1[i][j]= sc.nextInt();
+        }
+    }
+    
+    spiralMatrix(arr1,m,n);
+}
+}
+
+*/
